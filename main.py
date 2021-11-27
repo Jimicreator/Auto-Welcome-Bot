@@ -11,25 +11,25 @@ Pr0fess0r_99= Client(
 
 @Pr0fess0r_99.on_message(filters.command("start"))
 async def start(client: Pr0fess0r_99, update):
-    start_msg = "👋Hy {}, Iam Simple Auto Welcome Bot\n\nBot Owner Only /admin\n\nMaintained By @Mo_Tech_YT"
+    start_msg = "👋Hy {}, Iam Simple Auto Welcome Bot\n\nBot Owner Only /admin\n\nMaintained By @Jimi_Bots"
     bot_username = await client.get_me()
-    link = "PR0FESS0R-99/Auto-Welcome-Bot"
+    link = "t.me//Jimi_Bots"
     reply_markup = InlineKeyboardMarkup(
         [             
             [
                 InlineKeyboardButton
                     (
-                         "🤖More Bots", url="t.me/MT_Botz"
+                         "🤖More Bots", url="t.me/Jimi_Bots"
                     ),
                 InlineKeyboardButton
                     (
-                         "💡Open Source", url="https://github.com/{link}" # PR0FESS0R-99/Auto-Welcome-Bot
+                         "💡Open Source", url="https://github.com/Jimicreator/Auto-Welcome-Bot"
                     )
             ],   
             [
                 InlineKeyboardButton
                    (
-                        "➕️ Add Me To Your Chats ➕️", url=f"http://t.me/{bot_username.username}?startgroup=botstart"
+                        "➕️ Add Me To Your Group ➕️", url=f"http://t.me/{bot_username.username}?startgroup=botstart"
                    )
             ]
         ] 
@@ -42,7 +42,7 @@ async def start(client: Pr0fess0r_99, update):
 @Pr0fess0r_99.on_message(filters.private & filters.command("admin"))
 async def admin(bot: Pr0fess0r_99, update):
     # Heroku Support
-    user = "👋Hey {}, \n You are not the deploy of this bot"
+    user = "👋Hey {}, \n You are not the deployer of this bot"
     run = "WxJ3G7NBb4c" # https://github.com/PR0FESS0R-99/Auto-Welcome-Bot
     api_key = os.environ.get("APP_NAME", "AutoWelcomeBot")
     DEPLOY = bool(os.environ.get("HOSTED"))
@@ -78,7 +78,7 @@ async def admin(bot: Pr0fess0r_99, update):
             [
                 InlineKeyboardButton
                     (
-                        "💫 DEPLOY NOW 💫", url=f"https://youtu.be/{run}"
+                        "💫 DEPLOY NOW 💫", url=f"https://github.com/Jimicreator/Auto-Welcome-Bot"
                     )
             ]
         ]
@@ -99,7 +99,7 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
     group_name = msg.chat.title
     group_username = msg.chat.username
     name_button = "🔰 JOIN NOW 🔰"
-    link_button = "t.me/Mo_tech_YT"
+    link_button = "t.me/Jimi_Bots"
     button_name = os.environ.get("WELCOME_BUTTON_NAME", name_button)
     button_link = os.environ.get("WELCOME_BUTTON_LINK", link_button)
     welcome_text = f"Hey {mention}\nWelcome To {group_name}"
@@ -142,6 +142,6 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
 
 print("""Auto Welcome Bot Started
 
-Maintained By @Mo_Tech_YT""")
+Maintained By @Jimi_Bots""")
 
 Pr0fess0r_99.run()
